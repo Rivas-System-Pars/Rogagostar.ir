@@ -1,0 +1,114 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.faq_slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq_slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.the_accordion_item {
+  border-radius: 20px !important;
+  overflow: hidden;
+}
+
+.the_accordion_header {
+  height: 190px;
+  background-color: rgba(156, 39, 176, 0.7);
+  border-radius: 0% 100% 27% 73%/38% 0% 100% 62%;
+  overflow: hidden;
+  transition: height 0.9s ease;
+}
+
+.the_accordion_header.active {
+  border-radius: 20px 20px 0 0;
+  height: 130px;
+}
+.the_accordion_header.active .the_accordion_button {
+  align-items: start !important;
+  padding-top: 1.3rem;
+}
+
+.the_accordion_button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(156, 39, 176, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.3rem;
+  transition: all 0.9s ease;
+  font-weight: 600;
+}
+.the_accordion_button:not(.collapsed) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(156, 39, 176, 0.7);
+}
+.the_accordion_button:not(.collapsed)::before {
+  position: absolute;
+  width: 100%;
+  height: 23%;
+  content: "";
+  background-color: #fff;
+  bottom: 0;
+  right: 0;
+  border-radius: 0% 100% 50% 50%/100% 100% 0% 0%;
+}
+.the_accordion_button::after {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .the_accordion_body {
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+  }
+}
+
+.faq_button_next::after,
+.faq_button_prev::after {
+  color: rgba(156, 39, 176, 0.7);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.faq_button_next {
+  left: 0 !important;
+}
+
+.faq_button_prev {
+  right: 0 !important;
+}/*# sourceMappingURL=main.css.map */
